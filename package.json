@@ -3,10 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pedrocmota/react-more-hooks"
+  },
   "scripts": {
     "start": "webpack-cli serve --mode=development --env development --open --hot",
     "build": "webpack --mode=production --env production --progress",
     "lint": "eslint --ext .tsx --ext .ts src/"
+  },
+  "author": {
+    "name": "Pedro Mota",
+    "email": "pedrocerqueiramota@gmail.com"
   },
   "dependencies": {
     "react": "^17.0.2"
