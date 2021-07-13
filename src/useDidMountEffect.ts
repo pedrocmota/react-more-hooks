@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react'
 
-const useDidMountEffect = (func: React.EffectCallback, deps: React.DependencyList | undefined) => {
+export const useDidMountEffect = (func: React.EffectCallback, deps: React.DependencyList | undefined) => {
   const didMount = useRef(false)
   useEffect(() => {
     if (didMount.current) {
@@ -10,5 +10,3 @@ const useDidMountEffect = (func: React.EffectCallback, deps: React.DependencyLis
     }
   }, deps)
 }
-
-export default useDidMountEffect

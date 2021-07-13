@@ -3,7 +3,7 @@ import {useState, useCallback, useEffect, useRef, SetStateAction, } from 'react'
 type Callback<T> = (value?: T) => void
 type DispatchWithCallback<T> = (value: T, callback?: Callback<T>) => void
 
-function useStateCallback<T>(initialState: T | (() => T)): [T, DispatchWithCallback<SetStateAction<T>>] {
+export function useStateCallback<T>(initialState: T | (() => T)): [T, DispatchWithCallback<SetStateAction<T>>] {
   const [state, custumSetState] = useState(initialState)
 
   const callbackRef = useRef<Callback<T>>()
@@ -24,5 +24,3 @@ function useStateCallback<T>(initialState: T | (() => T)): [T, DispatchWithCallb
 
   return [state, setState]
 }
-
-export default useStateCallback
