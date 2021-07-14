@@ -5,7 +5,7 @@ import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 import {TsconfigPathsPlugin} from 'tsconfig-paths-webpack-plugin'
 
 const webpackConfig = (env): Configuration => ({
-  entry: './src/Test/Test.tsx',
+  entry: './test/Test.tsx',
   ...(env.production || !env.development ? {} : {devtool: 'eval-source-map'}),
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
@@ -33,7 +33,7 @@ const webpackConfig = (env): Configuration => ({
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html'
+      template: './test/public/index.html'
     }),
     new webpack.DefinePlugin({
       'process.env.PRODUCTION': env.production || !env.development,

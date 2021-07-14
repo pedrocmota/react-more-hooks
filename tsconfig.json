@@ -1,14 +1,18 @@
 {
   "compilerOptions": {
-    "sourceMap": true,
+    "skipLibCheck": true,
+    "sourceMap": false,
     "noImplicitAny": false,
-    "module": "commonjs",
-    "target": "es5",
+    "module": "commonJS",
+    "target": "ES6",
     "lib": [
       "esnext",
       "dom",
       "dom.iterable"
     ],
+    "types": [],
+    "declaration": true,
+    "outDir": "build",
     "removeComments": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "react",
@@ -18,14 +22,10 @@
     "resolveJsonModule": true,
     "moduleResolution": "node",
     "downlevelIteration": true,
-    "paths": {
-      "components/*": [
-        "src/components/*"
-      ]
-    }
   },
-  "include": [
-    "./src",
+  "include": ["src/*"],
+  "exclude": [
+    "./public",
     "./webpack.config.ts"
   ]
 }
