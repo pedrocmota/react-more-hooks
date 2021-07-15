@@ -13,7 +13,7 @@ const RemountContext = createContext<IRemountContext>({} as IRemountContext)
 
 export const useRemount = () => useContext(RemountContext)
 
-const Remount: React.FunctionComponent<IRemount> = (props) => {
+export const Remount: React.FunctionComponent<IRemount> = (props) => {
   const [key, setKey] = useState(uuidv4())
   const remount = useCallback(() => {
     setKey(uuidv4())
@@ -30,5 +30,3 @@ const Remount: React.FunctionComponent<IRemount> = (props) => {
     </RemountContext.Provider>
   )
 }
-
-export default Remount

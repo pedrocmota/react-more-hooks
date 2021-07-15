@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import ReactDOM from 'react-dom'
-import Remount, {useRemount} from '../src/lib/Remount'
+import {Remount, useRemount} from '../src/lib/Remount'
 
 const Teste: React.FunctionComponent = () => {
   return (
