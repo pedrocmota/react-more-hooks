@@ -1,6 +1,6 @@
 {
   "name": "react-more-hooks",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "/src/index.ts",
   "license": "MIT",
   "repository": {
@@ -10,9 +10,9 @@
   "scripts": {
     "start": "webpack-cli serve --mode=development --env development --open --hot",
     "build": "npx tsc",
-    "prepub": "copy package.json dist",
-    "pub": "cd dist & npm publish",
-    "postpub": "cd dist & del package.json"
+    "prepub": "copy package.json build",
+    "pub": "cd build & npm publish",
+    "postpub": "cd build & del package.json"
   },
   "author": {
     "name": "Pedro Mota",
