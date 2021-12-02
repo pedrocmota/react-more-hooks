@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "dist",
+    "baseUrl": ".",
+    "outDir": "build",
     "module": "commonJS",
     "target": "ES6",
     "skipLibCheck": true,
@@ -21,7 +21,9 @@
     ],
     "types": []
   },
-  "include": ["src/*"],
+  "include": [
+    "src/*"
+  ],
   "exclude": [
     "./public",
     "./webpack.config.ts"

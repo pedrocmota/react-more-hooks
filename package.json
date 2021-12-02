@@ -1,6 +1,6 @@
 {
   "name": "react-more-hooks",
-  "version": "0.0.2",
+  "version": "1.0.2",
   "main": "/src/index.ts",
   "license": "MIT",
   "repository": {
@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "webpack-cli serve --mode=development --env development --open --hot",
-    "build": "npx tsc --module ES6",
+    "build": "npx tsc",
     "prepub": "copy package.json dist",
     "pub": "cd dist & npm publish",
     "postpub": "cd dist & del package.json"

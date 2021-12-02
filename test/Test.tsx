@@ -1,25 +1,18 @@
 import React, {useState} from 'react'
 import ReactDOM from 'react-dom'
-import {Remount, useRemount} from '../src/lib/Remount'
+import {usePersistedState} from '../src/lib/usePeristedState'
 
 const Teste: React.FunctionComponent = () => {
   return (
-    <Remount>
-      <App/>
-    </Remount>
+    <App />
   )
 }
 
 const App = () => {
-  const [clicks, setClicks] = useState(0)
-  const {remount} = useRemount()
+  const [token, setToken] = usePersistedState('token', 'undefined')
   return (
-    <div>
-      <div>Click: {clicks}</div>
-      <button onClick={() => setClicks(clicks + 1)}>Add click</button>
-      <button onClick={() => remount()}>Reset</button>
-    </div>
+    <div>teste</div>
   )
 }
 
-ReactDOM.render(<Teste/>, document.getElementById('root'))
+ReactDOM.render(<Teste />, document.getElementById('root'))
